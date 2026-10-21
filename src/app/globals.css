@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Calm palette: soft sky blue + sage, warm off-white, gentle slate text.
+   Remapping the theme colours recolours every existing page (chat, login, landing) without touching them. */
+@theme {
+  --color-teal-50: #f0f6fc;
+  --color-teal-100: #deeaf7;
+  --color-teal-200: #c3d9ef;
+  --color-teal-300: #9bc0e3;
+  --color-teal-400: #6fa2d4;
+  --color-teal-500: #5189c2;
+  --color-teal-600: #4379b0;
+  --color-teal-700: #38648f;
+  --color-teal-800: #2f5273;
+  --color-teal-900: #284560;
+  --color-slate-50: #f7f9fb;
+  --color-slate-100: #eef2f6;
+  --color-slate-200: #e2e8ee;
+  --color-slate-300: #cbd5de;
+  --color-slate-500: #6b7a8a;
+  --color-slate-600: #556474;
+  --color-slate-700: #3f4c5a;
+  --color-slate-900: #26313c;
+  --radius-xl: 1rem;
+  --radius-lg: 0.75rem;
+}
+
+:root {
+  --background: #f6f9fc;
+  --foreground: #26313c;
+}
+
+body {
+  background: linear-gradient(180deg, #eef5fc 0%, var(--background) 280px);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-teal-600);
+  font-weight: 600;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(38, 49, 60, 0.04);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card, a, button {
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, color 0.2s;
+  }
+}
